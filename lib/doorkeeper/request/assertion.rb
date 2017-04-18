@@ -18,13 +18,13 @@ module Doorkeeper
 
       private
 
-      def client
-        if credentials
-          server.client
-        elsif parameters[:client_id]
-          server.client_via_uid
+        def client
+          if credentials
+            server.client
+          elsif parameters[:client_id]
+            server.client_via_uid
+          end
         end
-      end
     end
   end
 end

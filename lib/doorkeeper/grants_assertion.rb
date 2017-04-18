@@ -1,5 +1,5 @@
-require "doorkeeper/request/assertion"
-require "doorkeeper/grants_assertion/railtie"
+require 'doorkeeper/request/assertion'
+require 'doorkeeper/grants_assertion/railtie'
 
 module Doorkeeper
   module GrantsAssertion
@@ -19,9 +19,9 @@ end
 
 module Doorkeeper
   class Config
-    option :resource_owner_from_assertion, default: (lambda do |routes|
-        warn(I18n.t("doorkeeper.errors.messages.assertion_flow_not_configured"))
-        nil
-      end)
+    option :resource_owner_from_assertion, default: (lambda do |_routes|
+                                                       warn(I18n.t('doorkeeper.errors.messages.assertion_flow_not_configured'))
+                                                       nil
+                                                     end)
   end
 end

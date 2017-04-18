@@ -5,7 +5,7 @@ require 'sprockets/railtie'
 
 Bundler.require :default
 
-require "active_record/railtie"
+require 'active_record/railtie'
 
 module Dummy
   class Application < Rails::Application
